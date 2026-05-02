@@ -3,21 +3,21 @@
 using namespace bobcat;
 
 ColorSelector::ColorSelector(int x, int y, int w, int h) : Group(x, y, w, h) {
-    rSlider = new Fl_Value_Slider(x + 30, y + 8, 300, 25, "R");
+    rSlider = new Fl_Value_Slider(x + 25, y + 5, 280, 24, "R");
     rSlider->type(FL_HORIZONTAL);
     rSlider->bounds(0, 255);
     rSlider->step(1);
     rSlider->value(0);
     rSlider->callback(sliderChanged, this);
 
-    gSlider = new Fl_Value_Slider(x + 30, y + 38, 300, 25, "G");
+    gSlider = new Fl_Value_Slider(x + 25, y + 33, 280, 24, "G");
     gSlider->type(FL_HORIZONTAL);
     gSlider->bounds(0, 255);
     gSlider->step(1);
     gSlider->value(0);
     gSlider->callback(sliderChanged, this);
 
-    bSlider = new Fl_Value_Slider(x + 30, y + 68, 300, 25, "B");
+    bSlider = new Fl_Value_Slider(x + 25, y + 61, 280, 24, "B");
     bSlider->type(FL_HORIZONTAL);
     bSlider->bounds(0, 255);
     bSlider->step(1);

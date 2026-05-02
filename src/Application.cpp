@@ -3,14 +3,14 @@
 using namespace bobcat;
 
 Application::Application() {
-    window = new Window(25, 75, 850, 650, "Paint Application");
+    window = new Window(25, 25, 780, 500, "Paint Application");
 
-    canvas = new Canvas(50, 0, 800, 550);
-    toolbar = new Toolbar(0, 0, 50, 650);
-    colorSelector = new ColorSelector(50, 550, 800, 100);
+    toolbar = new Toolbar(0, 0, 780, 40);
+    canvas = new Canvas(0, 40, 780, 370);
+    colorSelector = new ColorSelector(0, 410, 780, 90);
 
-    window->add(canvas);
     window->add(toolbar);
+    window->add(canvas);
     window->add(colorSelector);
 
     ON_MOUSE_DOWN(canvas, Application::onCanvasMouseDown);

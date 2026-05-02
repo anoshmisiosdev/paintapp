@@ -3,24 +3,29 @@
 using namespace bobcat;
 
 Toolbar::Toolbar(int x, int y, int w, int h) : Group(x, y, w, h) {
-    int bh = 42;
-    int row = 0;
+    int bw = 50;
+    int bh = 36;
+    int px = x + 2;
+    int py = y + 2;
 
-    pencilButton = new Image(x, y + bh * row++, 50, bh, "./assets/pencil.png");
-    eraserButton = new Image(x, y + bh * row++, 50, bh, "./assets/eraser.png");
-    mouseButton = new Image(x, y + bh * row++, 50, bh, "./assets/mouse.png");
-    circleButton = new Image(x, y + bh * row++, 50, bh, "./assets/circle.png");
-    triangleButton = new Image(x, y + bh * row++, 50, bh, "./assets/triangle.png");
-    rectangleButton = new Image(x, y + bh * row++, 50, bh, "./assets/rectangle.png");
-    pentagonButton = new Button(x, y + bh * row++, 50, bh, "Pent");
-    starButton = new Button(x, y + bh * row++, 50, bh, "Star");
-    undoButton = new Image(x, y + bh * row++, 50, bh, "./assets/undo.png");
-    redoButton = new Button(x, y + bh * row++, 50, bh, "Redo");
-    clearButton = new Image(x, y + bh * row++, 50, bh, "./assets/clear.png");
-    frontButton = new Button(x, y + bh * row++, 50, bh, "Frnt");
-    backButton = new Button(x, y + bh * row++, 50, bh, "Back");
-    growButton = new Button(x, y + bh * row++, 50, bh, "+");
-    shrinkButton = new Button(x, y + bh * row++, 50, bh, "-");
+    pencilButton = new Image(px, py, bw, bh, "./assets/pencil.png");     px += bw;
+    eraserButton = new Image(px, py, bw, bh, "./assets/eraser.png");     px += bw;
+    mouseButton = new Image(px, py, bw, bh, "./assets/mouse.png");       px += bw;
+    circleButton = new Image(px, py, bw, bh, "./assets/circle.png");     px += bw;
+    triangleButton = new Image(px, py, bw, bh, "./assets/triangle.png"); px += bw;
+    rectangleButton = new Image(px, py, bw, bh, "./assets/rectangle.png"); px += bw;
+    pentagonButton = new Button(px, py, bw, bh, "Pent");                 px += bw;
+    starButton = new Button(px, py, bw, bh, "Star");                     px += bw;
+
+    px += 10;
+
+    undoButton = new Image(px, py, bw, bh, "./assets/undo.png");         px += bw;
+    redoButton = new Button(px, py, bw, bh, "Redo");                     px += bw;
+    clearButton = new Image(px, py, bw, bh, "./assets/clear.png");       px += bw;
+    frontButton = new Button(px, py, bw, bh, "Frnt");                    px += bw;
+    backButton = new Button(px, py, bw, bh, "Back");                     px += bw;
+    growButton = new Button(px, py, bw, bh, "+");                        px += bw;
+    shrinkButton = new Button(px, py, bw, bh, "-");
 
     pencilButton->box(FL_BORDER_BOX);
     eraserButton->box(FL_BORDER_BOX);
